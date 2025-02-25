@@ -38,11 +38,11 @@ import androidx.compose.ui.unit.sp
 import br.senai.sp.jandira.mytrips.R
 
 @Composable
-fun TelaLogin(modifier: Modifier = Modifier){
+fun TelaLogin(modifier: Modifier = Modifier) {
     Box(
         modifier = Modifier
             .fillMaxSize()
-    ){
+    ) {
         Card(
             modifier = Modifier
                 .align(
@@ -66,21 +66,21 @@ fun TelaLogin(modifier: Modifier = Modifier){
         )
         {
             Column {
-                        Text(
-                            text = stringResource(R.string.login),
-                            fontSize = 60.sp,
-                            fontWeight = FontWeight.Bold,
-                            color = Color(0xFFFF0000)
-                        )
+                Text(
+                    text = stringResource(R.string.login),
+                    fontSize = 60.sp,
+                    fontWeight = FontWeight.Bold,
+                    color = Color(0xFFFF0000)
+                )
 
-                        Text(
-                            text = stringResource(R.string.please_sign)
-                        )
-                    }
+                Text(
+                    text = stringResource(R.string.please_sign)
+                )
+            }
 
-            Column (
+            Column(
                 verticalArrangement = Arrangement.SpaceBetween
-            ){
+            ) {
                 OutlinedTextField(
                     value = "",
                     onValueChange = {},
@@ -92,7 +92,8 @@ fun TelaLogin(modifier: Modifier = Modifier){
                         Text(text = stringResource(R.string.email))
                     },
                     leadingIcon = {
-                        Icon(painter = painterResource(id = R.drawable.mail),
+                        Icon(
+                            painter = painterResource(id = R.drawable.mail),
                             contentDescription = stringResource(id = R.string.email_desc),
                             modifier = Modifier.size(24.dp)
                         )
@@ -109,23 +110,25 @@ fun TelaLogin(modifier: Modifier = Modifier){
                         Text(text = stringResource(R.string.password))
                     },
                     leadingIcon = {
-                        Icon(painter = painterResource(id = R.drawable.lock),
+                        Icon(
+                            painter = painterResource(id = R.drawable.lock),
                             contentDescription = stringResource(id = R.string.email_desc),
                             modifier = Modifier.size(24.dp)
                         )
                     }
                 )
 
-                Button(onClick = {},
-                        shape = RoundedCornerShape(12.dp),
+                Button(
+                    onClick = {},
+                    shape = RoundedCornerShape(12.dp),
                     modifier = Modifier
                         .height(60.dp)
                         .width(120.dp)
                         .align(Alignment.End)
                         .padding(top = 10.dp),
-                        colors = ButtonDefaults.buttonColors(
-                            containerColor = Color(0xFFFF0000)
-                        )
+                    colors = ButtonDefaults.buttonColors(
+                        containerColor = Color(0xFFFF0000)
+                    )
                 ) {
                     Text(
                         text = stringResource(R.string.sign_in),
@@ -142,19 +145,19 @@ fun TelaLogin(modifier: Modifier = Modifier){
                         .fillMaxWidth()
                         .height(30.dp),
                     horizontalArrangement = Arrangement.End
-                )   {
-                        Text(
-                            text = stringResource(R.string.no_account)
-                        )
-                        Text(
-                            text = stringResource(R.string.sign_up),
-                            color = Color(0xFFFF0000),
-                            fontWeight = FontWeight.Bold,
-                            modifier = Modifier
-                                .padding(start = 5.dp)
-                        )
+                ) {
+                    Text(
+                        text = stringResource(R.string.no_account)
+                    )
+                    Text(
+                        text = stringResource(R.string.sign_up),
+                        color = Color(0xFFFF0000),
+                        fontWeight = FontWeight.Bold,
+                        modifier = Modifier
+                            .padding(start = 5.dp)
+                    )
 
-                    }
+                }
             }
         }
 
@@ -166,7 +169,7 @@ fun TelaLogin(modifier: Modifier = Modifier){
                 .height(50.dp)
                 .width(150.dp),
             shape = RoundedCornerShape
-                ( topEnd = 20.dp),
+                (topEnd = 20.dp),
             colors = CardDefaults.cardColors(
                 containerColor = Color(0xFFFF0000)
             )
